@@ -18,168 +18,56 @@ function App() {
 
   return (
     <div className="app">
-
       <div className="overlay"></div>
 
-      <div className="counter-container">
+      <div className="counter-card">
+        <div className="badge">REACT HOOKS</div>
 
-        {/* HEADER */}
+        <h1>Counter Application</h1>
 
-        <div className="header">
+        <p className="subtitle">
+          Built using React Functional Components & useState Hook
+        </p>
 
-          <div className="logo">
-            <span>R</span>
+        <div className="counter-circle">
+          <span>{count}</span>
+        </div>
+
+        <div className="buttons">
+          <button className="decrement" onClick={decrement}>
+            −
+          </button>
+
+          <button className="reset" onClick={reset}>
+            Reset
+          </button>
+
+          <button className="increment" onClick={increment}>
+            +
+          </button>
+        </div>
+
+        <div className="info">
+          <div>
+            <strong>useState()</strong>
+            <span>State Management</span>
           </div>
 
           <div>
-            <p className="subtitle">
-              REACT HOOKS
-            </p>
-
-            <h1>
-              Counter
-            </h1>
+            <strong>+</strong>
+            <span>Increment</span>
           </div>
 
+          <div>
+            <strong>−</strong>
+            <span>Decrement</span>
+          </div>
         </div>
-
-
-        {/* COUNTER CARD */}
-
-        <div className="counter-card">
-
-          <div className="card-top">
-
-            <span>
-              SIMPLE COUNTER
-            </span>
-
-            <span className="status">
-              ● LIVE
-            </span>
-
-          </div>
-
-
-          <div className="counter-display">
-
-            <p className="count-label">
-              CURRENT VALUE
-            </p>
-
-            <div
-              className={`count ${
-                count > 0
-                  ? "positive"
-                  : count < 0
-                  ? "negative"
-                  : ""
-              }`}
-            >
-              {count}
-            </div>
-
-            <p className="count-status">
-
-              {count > 0
-                ? "Value is positive"
-                : count < 0
-                ? "Value is negative"
-                : "Counter is at zero"}
-
-            </p>
-
-          </div>
-
-
-          {/* BUTTONS */}
-
-          <div className="buttons">
-
-            <button
-              className="counter-button decrease"
-              onClick={decrement}
-            >
-              <span>−</span>
-              Decrease
-            </button>
-
-
-            <button
-              className="counter-button reset"
-              onClick={reset}
-            >
-              Reset
-            </button>
-
-
-            <button
-              className="counter-button increase"
-              onClick={increment}
-            >
-              Increase
-              <span>+</span>
-            </button>
-
-          </div>
-
-
-          {/* HOOK INFO */}
-
-          <div className="hook-info">
-
-            <div className="info-item">
-
-              <span className="info-icon">
-                ⚛
-              </span>
-
-              <div>
-                <strong>useState()</strong>
-                <p>
-                  React State Hook
-                </p>
-              </div>
-
-            </div>
-
-
-            <div className="info-item">
-
-              <span className="info-icon">
-                ↻
-              </span>
-
-              <div>
-                <strong>Functional</strong>
-                <p>
-                  React Component
-                </p>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        {/* FOOTER */}
-
-        <div className="footer">
-
-          <span>
-            REACT COUNTER APPLICATION
-          </span>
-
-          <span>
-            useState HOOK
-          </span>
-
-        </div>
-
       </div>
 
+      <footer>
+        React Hooks Mini Project
+      </footer>
     </div>
   );
 }
